@@ -70,16 +70,17 @@ a:hover{
 
 /*contact div/part*/
 .contact{
-    width: 80%;
-    max-width: 600px;
+    width: 90%;                    /* Ensure the width adjusts with screen size */
+    max-width: 600px;              /* Prevent it from getting too wide */
     background: rgba(223, 219, 219, 0.8); 
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     padding: 30px;
-    margin: 0 auto;
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
+    margin: 0 auto;                /* Center the div horizontally */
+    display: flex;                 /* Use flexbox for centering contents */
+    flex-direction: column;        /* Stack content vertically */
+    align-items: center;           /* Center items horizontally inside */
+    justify-content: center;       /* Center items vertically inside */
     font-weight: 300;
 }
 
@@ -140,6 +141,11 @@ header{
         flex-direction: column;
         gap: 15px;
     }
+
+    .contact {
+        max-width: 80%;
+        padding: 15px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -147,6 +153,15 @@ header{
         font-size: 12px;
     }
 
+    .main{
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    .contact{
+        max-width: 100%;
+        padding: 15px;
+    }
     nav ul {
         text-align: center;
     }
